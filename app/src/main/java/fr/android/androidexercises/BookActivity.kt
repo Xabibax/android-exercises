@@ -7,14 +7,14 @@ import android.widget.TextView
 class BookActivity : AppCompatActivity() {
 
     companion object {
-        private const val BOOK = "BOOK"
+        const val BOOK = "BOOK"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book)
 
-        val book: Book = intent.getParcelableExtra(BOOK)!!
+        val book: Book = intent.getParcelableExtra(BOOK) ?: Book()
 
         val authorTextView = findViewById<TextView>(R.id.authorTextView)
         authorTextView.text = book.author

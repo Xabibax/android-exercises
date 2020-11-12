@@ -18,12 +18,11 @@ class LibraryActivity : AppCompatActivity() {
 
         val openButton = findViewById<Button>(R.id.openButton)
 
-        val book = Book("Garry Whopper", "CK Rowling")
+        val book = Book("Done", "F Hubert")
 
         openButton.setOnClickListener { v ->
             val intent = Intent(this@LibraryActivity, BookActivity::class.java)
-            // TODO add parcel book to intent
-            startActivity(intent)
+            startActivity(intent.putExtra(BookActivity.BOOK, book))
         }
     }
 

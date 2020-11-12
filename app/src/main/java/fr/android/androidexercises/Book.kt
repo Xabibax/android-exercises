@@ -1,5 +1,7 @@
 package fr.android.androidexercises
 
-// TODO parcel
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
-data class Book(val name: String, val author: String)
+@Parcelize
+data class Book(val name: String = "No Book", val author: String = "No Author"): Parcelable
