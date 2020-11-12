@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/fab_margin"
     tools:context=".LibraryActivity">
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/left_text"
+        android:background="#E60E0E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/left_text" />
+
+    <TextView
+        android:id="@+id/below_left_text"
+        android:background="#0ECDE6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/left_text"
+        android:text="@string/below_left_text" />
+
+    <TextView
+        android:id="@+id/right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#36E60E"
+        android:text="@string/right_text" />
+
+    <TextView
+        android:id="@+id/center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E6A90E"
+        android:text="@string/center_text" />
+
+    <TextView
+        android:id="@+id/bottom_center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#9A0EE6"
+        android:text="@string/bottom_center_text" />
+
+    <TextView
+        android:id="@+id/above_bottom_center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0E32E6"
+        android:text="@string/above_bottom_center_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
