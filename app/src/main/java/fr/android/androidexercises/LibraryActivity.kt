@@ -14,19 +14,24 @@ class LibraryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_library)
+
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         val openButton = findViewById<Button>(R.id.openButton)
-
         openButton.setOnClickListener {
-            // TODO replace with startActivityForResult() to start BookActivity
-            Toast.makeText(this@LibraryActivity, R.string.toast_todo, Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, BookActivity::class.java)
+            startActivityForResult(intent, CONTEXT_INCLUDE_CODE)
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        // TODO get back book name
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == RESULT_OK)
+            data?.extras ?: return
+            val bookName = data?.extras?.getString("BOOK_NAME")
+            Toast.makeText(this@LibraryActivity, bookName, Toast.LENGTH_SHORT).show()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
