@@ -16,6 +16,7 @@ class LibraryActivity : AppCompatActivity() {
 
         val messageTextView = findViewById<TextView>(R.id.messageTextView)
         // TODO call text on messageTextView
+        messageTextView.text = getString(R.string.super_titre)
 
         setSupportActionBar(toolbar)
     }
