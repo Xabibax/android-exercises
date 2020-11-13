@@ -30,7 +30,9 @@ android {
     }
 
 }
-
+ext.retrofit_version = '2.4.0'
+ext.okhttp_version = '3.11.0'
+ext.picasso_version = '2.8'
 dependencies {
     testImplementation 'junit:junit:4.13'
     implementation(
@@ -39,6 +41,10 @@ dependencies {
             'androidx.constraintlayout:constraintlayout:2.0.4')
     implementation('com.jakewharton.timber:timber:4.7.1')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.picasso:picasso:$picasso_version"
 }
 repositories {
     mavenCentral()
