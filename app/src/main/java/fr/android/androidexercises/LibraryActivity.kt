@@ -1,6 +1,7 @@
 package fr.android.androidexercises
 
 import android.os.Bundle
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 
 import java.util.ArrayList
@@ -19,7 +20,7 @@ class LibraryActivity : AppCompatActivity() {
 
         val books = books
 
-        // TODO findViewById() and setAdapter()
+        findViewById<ListView>(R.id.bookListView).adapter = BookAdapter(this, books)
     }
 
     private val books: List<Book>

@@ -10,9 +10,11 @@ class BookItemView @JvmOverloads constructor(context: Context, attrs: AttributeS
     override fun onFinishInflate() {
         super.onFinishInflate()
         // TODO findViewById()
+
     }
 
     fun bindView(book: Book) {
         // TODO setText()
+
     }
 }
